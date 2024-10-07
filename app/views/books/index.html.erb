@@ -1,2 +1,21 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+<%= @books.each do |book| %>
+
+  <p>title</p>
+  <span><%= book.title %></span>
+
+  <p>body</p>
+  <span><%= book.body %></span>
+
+  <p>
+    <a href="/books/"book.id >Show</a>
+  </p>
+  <p>
+    <a href="/books/edit">Edit</a>
+  </p>
+  <p>
+    <a href="/books">Destroy</a>
+  </p>
+
+
+<% end %>
