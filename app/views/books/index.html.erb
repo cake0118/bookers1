@@ -1,5 +1,5 @@
 <h1>Books</h1>
-<%= @books.each do |book| %>
+<% @books.each do |book| %>
 
   <p>title</p>
   <span><%= book.title %></span>
@@ -8,10 +8,10 @@
   <span><%= book.body %></span>
 
   <p>
-    <a href="/books/"book.id >Show</a>
+   <%= link_to "Show", books_path(@books.id)%>
   </p>
   <p>
-    <a href="/books/edit">Edit</a>
+    <%= link_to "Edit", books_path(@books.id) %>
   </p>
   <p>
     <a href="/books">Destroy</a>
