@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   # 初期ページの../にトップページを表示
   root :to => 'homes#top'
   # /booksというurlではbooksコントローラーのnewアクションを行う
-  get 'books' => 'books#new'
-  post 'books' => 'books#create'
+  post 'books/index' => 'books#create'
   get 'books/index' => 'books#index'
+  get 'books/index' => 'books#new'
   get 'books/:id' => 'books#show', as: 'book'
   get 'books/:id/edit' => 'books#edit', as: 'edit_book'
   patch 'books/:id' => 'books#update', as: 'update_book'
