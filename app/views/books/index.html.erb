@@ -7,15 +7,16 @@
   <p>body</p>
   <span><%= book.body %></span>
 
-  <p>
-   <%= link_to "Show", books_path(@books.id)%>
-  </p>
-  <p>
-    <%= link_to "Edit", books_path(@books.id) %>
-  </p>
-  <p>
-    <a href="/books">Destroy</a>
-  </p>
+　<p></p>
+  <span>
+   <%= link_to "Show", book_path(book.id)%>
+  </span>
+  <span>
+    <%= link_to "Edit", book_path(book.id) %>
+  </span>
+  <span>
+    <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "date-confirm" => "Are you sure?" %>
+  </span>
 
 
 <% end %>
