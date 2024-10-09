@@ -6,7 +6,8 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
-      render :"/books/index"
+      @books = Book.all
+      render :"/books"
     end
   end
 
@@ -38,7 +39,7 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
     book.destroy
     flash[:notice] = "Book was successfully destroyed."
-    redirect_to "/books/index"
+    redirect_to "/books"
   end
 
   private
